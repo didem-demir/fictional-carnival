@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-file_path = "/Users/macbookpro/Desktop/dersler/4-2/P.I. Works/country_vaccination_stats.csv"
+file_path = "country_vaccination_stats.csv"
 df = pd.read_csv(file_path)
 print(df.head())
 
@@ -19,3 +19,4 @@ for c in country_list:
         replace_value = df[df['country']==c]['daily_vaccinations'].agg('min')
     df.loc[df['country']==c,'daily_vaccinations'] = df.loc[df['country']==c,'daily_vaccinations'].fillna(replace_value)
  
+print(df[df['daily_vaccinations'].isna()])
