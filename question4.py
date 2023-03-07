@@ -3,7 +3,6 @@ import numpy as np
 
 file_path = "country_vaccination_stats.csv"
 df = pd.read_csv(file_path)
-print(df.head())
 
 """
 Implement code to fill the missing data (impute) in daily_vaccinations column per country
